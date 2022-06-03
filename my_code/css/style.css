@@ -1,0 +1,175 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+.top_section {
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.top_section h1 {
+  font-size: 3rem;
+}
+.top_section .one {
+  margin-bottom: -30px;
+  font-weight: 100;
+  color: var(--VeryDarkBlue);
+}
+.top_section .two {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--VeryDarkBlue);
+}
+.top_section p {
+  font-size: 20px;
+  width: 470px;
+  line-height: 1.5;
+  margin-top: 0;
+  color: var(--GrayishBlue);
+}
+.bottom_section {
+  height: 65vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.bottom_section .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.bottom_section .sections {
+  display: flex;
+  position: relative;
+  width: 450px;
+  height: 100%;
+  margin: 10px;
+}
+.bottom_section .sections #first::before {
+  position: absolute;
+  content: "";
+  width: 95%;
+  height: 7px;
+  background-color: var(--Cyan);
+  border-radius: 7px 7px 0 0;
+}
+.bottom_section .sections #second::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 7px;
+  border-radius: 7px 7px 0 0;
+  background-color: var(--Red);
+}
+.bottom_section .sections #thired::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 7px;
+  border-radius: 7px 7px 0 0;
+  background-color: var(--Orange);
+}
+.bottom_section .sections #fourth::before {
+  position: absolute;
+  content: "";
+  width: 95%;
+  height: 7px;
+  border-radius: 7px 7px 0 0;
+  background-color: var(--Blue);
+}
+.bottom_section .first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_section .second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_section .thired {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_section .sections .card {
+  width: 100%;
+  height: 280px;
+  margin: 10px;
+  background-color: var(--VeryLightGray);
+  box-shadow: 10px 5px 25px var(--GrayishBlue);
+}
+.bottom_section .sections .card .card_text {
+  padding: 20px;
+  margin: 10px;
+}
+.bottom_section .sections .card .card_text p {
+  font-size: 15px;
+  width: 220px;
+  line-height: 1.5;
+  color: var(--GrayishBlue);
+}
+.bottom_section .sections .card .card_img {
+  margin-left: 330px;
+}
+@media (max-width: 375px) {
+  .top_section {
+    width: 100vw;
+    height: 30vh;
+    padding-top: 40px;
+  }
+  .top_section h1 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-top: 35px;
+  }
+  .top_section p {
+    width: 260px;
+    font-size: 15px;
+  }
+  .bottom_section {
+    display: flex;
+    flex-direction: column;
+    height: 1010px;
+    width: 100vw;
+    margin-top: 40px;
+  }
+  .bottom_section .sections {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+  }
+  .bottom_section .sections .card {
+    width: 300px;
+    height: 230px;
+    position: relative;
+    padding-top: 0;
+  }
+  .bottom_section .sections #first::before,
+  .bottom_section .sections #second::before,
+  .bottom_section .sections #thired::before,
+  .bottom_section .sections #fourth::before {
+    position: absolute;
+    width: 100%;
+  }
+  .bottom_section .sections .card .card_img {
+    margin-left: 210px;
+    margin-top: -35px;
+  }
+}
